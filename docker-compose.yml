@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  api:
+    build: ./
+    command: npm start
+    volumes:
+      - ./node-vite-ts-express:/node-vite-ts-express
+    expose: 
+      - "3000"
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
